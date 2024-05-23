@@ -1,14 +1,8 @@
 #!/bin/bash
 # See: https://github.com/dockerswarm-library/dockerswarm-entrypoint.sh/blob/main/dockerswarm-entrypoint.sh
 
-entrypoint_log() {
-    if [ -z "${DOCKERSWARM_ENTRYPOINT_QUIET_LOGS:-}" ]; then
-        echo "$@"
-    fi
-}
-
 # Get the IP addresses of the tasks of the service using DNS resolution
-function dockerswarm_service_discovery() {
+function dockerswarm_sd() {
     local service_name=$1
     if [ -z "$service_name" ]; then
         echo "[dockerswarm_service_discovery]: command line is not complete, service name is required"
