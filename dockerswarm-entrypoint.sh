@@ -1,4 +1,5 @@
 #!/bin/bash
+# See: https://github.com/dockerswarm-library/dockerswarm-entrypoint.sh/blob/main/dockerswarm-entrypoint.sh
 
 entrypoint_log() {
     if [ -z "${DOCKERSWARM_ENTRYPOINT_QUIET_LOGS:-}" ]; then
