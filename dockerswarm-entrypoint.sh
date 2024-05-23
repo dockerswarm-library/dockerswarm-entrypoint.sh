@@ -1,5 +1,5 @@
 #!/bin/bash
-# See: https://github.com/dockerswarm-library/dockerswarm-entrypoint.sh/blob/main/dockerswarm-entrypoint.sh
+# https://github.com/swarmlibs/dockerswarm-entrypoint.sh/blob/main/dockerswarm-entrypoint.sh
 
 # Get the IP addresses of the tasks of the service using DNS resolution
 function dockerswarm_sd() {
