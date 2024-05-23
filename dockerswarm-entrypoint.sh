@@ -5,7 +5,7 @@
 function dockerswarm_sd() {
     local service_name=$1
     if [ -z "$service_name" ]; then
-        echo "[dockerswarm_service_discovery]: command line is not complete, service name is required"
+        echo "[dockerswarm_sd]: command line is not complete, service name is required"
         return 1
     fi
     dig +short "tasks.${service_name}" | sort
